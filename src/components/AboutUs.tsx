@@ -42,8 +42,8 @@ const AboutUs = () => {
               </div>
               
               <div className="flex justify-between items-center">
-                <p className="text-sm font-bold">TEAM WARAS, 2023</p>
-                <p className="text-xs">Revisi ke-17</p>
+                <p className="text-sm font-bold">TEAM WARAS, 2025</p>
+                <p className="text-xs">Burjo Teko</p>
               </div>
             </div>
           </div>
