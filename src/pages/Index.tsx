@@ -33,7 +33,7 @@ const Index = () => {
             WARAS
           </h1>
         </div>
-        <p className="text-waras-lime animate-pulse">loading absurdity...</p>
+        <p className="text-waras-lime animate-pulse">sek yoo...</p>
       </div>
     );
   }

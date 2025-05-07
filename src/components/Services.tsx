@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 
@@ -73,7 +72,7 @@ const Services = () => {
                   <div className={`h-12 w-1 ${service.color} flex-shrink-0`}></div>
                   
                   <div>
-                    <h3 className={`text-2xl font-bold mb-4 ${service.textColor || 'text-white'}`}>
+                    <h3 className="text-2xl font-bold mb-4 text-white">
                       {service.title}
                     </h3>
                     
