@@ -57,7 +57,7 @@ const Testimonials = () => {
       
       <div className="container mx-auto px-4">
         <h2 className="text-4xl md:text-5xl font-bebas mb-16 text-center text-waras-pink">
-          Testimoni Absurd
+          Testimoni Klien
         </h2>
         
         <div 
