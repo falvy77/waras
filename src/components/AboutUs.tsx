@@ -36,7 +36,7 @@ const AboutUs = () => {
               <div className="border-4 border-waras-asphalt p-2 bg-white mb-4">
                 <div className="h-64 bg-waras-asphalt flex items-center justify-center overflow-hidden">
                   <p className="text-xl rotate-6 text-white px-4 py-2 bg-waras-pink">
-                    [Foto dua founder lagi lempengin kertas proposal]
+                    <img src="path/ke/487405758_1047572187427807_3880226450088928121_n.jpg" alt="Deskripsi gambar" width="200" height="100">
                   </p>
                 </div>
               </div>
