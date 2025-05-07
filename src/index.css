@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/panchang');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -35,19 +39,12 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -96,6 +93,111 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-waras-asphalt text-white font-space;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bebas tracking-wider;
+  }
+
+  .glitch {
+    position: relative;
+  }
+
+  .glitch::before,
+  .glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .glitch::before {
+    left: 2px;
+    text-shadow: -2px 0 #FF4DA6;
+    clip: rect(24px, 550px, 90px, 0);
+    animation: glitch-anim-1 5s infinite linear alternate-reverse;
+  }
+
+  .glitch::after {
+    left: -2px;
+    text-shadow: -2px 0 #00F0FF;
+    clip: rect(85px, 550px, 140px, 0);
+    animation: glitch-anim-2 1s infinite linear alternate-reverse;
+  }
+
+  @keyframes glitch-anim-1 {
+    0% { clip: rect(42px, 9999px, 44px, 0); }
+    20% { clip: rect(12px, 9999px, 59px, 0); }
+    40% { clip: rect(96px, 9999px, 4px, 0); }
+    60% { clip: rect(67px, 9999px, 11px, 0); }
+    80% { clip: rect(58px, 9999px, 78px, 0); }
+    100% { clip: rect(73px, 9999px, 5px, 0); }
+  }
+
+  @keyframes glitch-anim-2 {
+    0% { clip: rect(32px, 9999px, 91px, 0); }
+    20% { clip: rect(90px, 9999px, 98px, 0); }
+    40% { clip: rect(91px, 9999px, 94px, 0); }
+    60% { clip: rect(61px, 9999px, 34px, 0); }
+    80% { clip: rect(66px, 9999px, 5px, 0); }
+    100% { clip: rect(7px, 9999px, 24px, 0); }
+  }
+
+  .sticky-note {
+    @apply relative p-6 rotate-2 transform;
+    background-color: #FFFA8A;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .sticky-note::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-top: 20px solid rgba(0, 0, 0, 0.1);
+    border-left: 20px solid transparent;
+  }
+
+  .noise {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .noise::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    right: -100%;
+    bottom: -100%;
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeComponentTransfer%3E%3CfeFuncR type='linear' slope='2' intercept='-0.5'/%3E%3CfeFuncG type='linear' slope='2' intercept='-0.5'/%3E%3CfeFuncB type='linear' slope='2' intercept='-0.5'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 200px;
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: 1;
+  }
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent;
+  background-image: linear-gradient(135deg, #7B2CBF 0%, #FF4DA6 50%, #C6FF00 100%);
+}
+
+.waras-button {
+  @apply relative overflow-hidden font-bold py-3 px-6 rounded-md transition-all duration-300 
+         outline outline-2 outline-offset-4 transform hover:-translate-y-1;
+}
+
+.waras-button-primary {
+  @apply bg-waras-lime text-waras-asphalt outline-waras-lime hover:bg-waras-purple hover:text-white hover:outline-waras-purple;
+}
+
+.waras-button-secondary {
+  @apply bg-waras-orange text-white outline-waras-orange hover:bg-waras-blue hover:outline-waras-blue;
 }

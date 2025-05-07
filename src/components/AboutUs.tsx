@@ -1,0 +1,85 @@
+
+import React, { useEffect, useRef } from 'react';
+import { useInView } from 'react-intersection-observer';
+
+const AboutUs = () => {
+  const { ref, inView } = useInView({
+    threshold: 0.3,
+    triggerOnce: true
+  });
+
+  return (
+    <section id="about" className="py-20 relative noise overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-waras-purple opacity-20 blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 w-1/4 h-1/4 bg-waras-orange opacity-10 blur-3xl"></div>
+      
+      <div className="container mx-auto px-4">
+        <h2 className="text-4xl md:text-5xl font-bebas mb-16 text-center">
+          <span className="text-waras-lime">Agensi Dua Kepala</span>,{" "}
+          <span className="text-waras-pink">Banyak Kepala Pusing</span>
+        </h2>
+        
+        <div 
+          ref={ref}
+          className={`flex flex-col md:flex-row gap-8 items-center transition-all duration-1000 ${
+            inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+        >
+          {/* "Photo" of founders */}
+          <div className="w-full md:w-1/2 relative">
+            <div className="sticky-note text-waras-asphalt -rotate-3">
+              <div className="absolute top-0 right-0 w-16 h-16 bg-waras-pink opacity-20 rounded-full"></div>
+              <div className="absolute bottom-10 left-10 w-20 h-20 bg-waras-lime opacity-20 rounded-full"></div>
+              
+              <div className="border-4 border-waras-asphalt p-2 bg-white mb-4">
+                <div className="h-64 bg-waras-asphalt flex items-center justify-center overflow-hidden">
+                  <p className="text-xl rotate-6 text-white px-4 py-2 bg-waras-pink">
+                    [Foto dua founder lagi lempengin kertas proposal]
+                  </p>
+                </div>
+              </div>
+              
+              <div className="flex justify-between items-center">
+                <p className="text-sm font-bold">TEAM WARAS, 2023</p>
+                <p className="text-xs">Revisi ke-17</p>
+              </div>
+            </div>
+          </div>
+          
+          {/* About text */}
+          <div className="w-full md:w-1/2">
+            <div className="bg-waras-asphalt/30 backdrop-blur-sm border border-white/10 p-6 rounded-lg">
+              <p className="text-xl mb-6 leading-relaxed">
+                Kami bukan lulusan Harvard. Tapi kami pernah{" "}
+                <span className="text-waras-lime font-bold">survive revisi 17x</span>{" "}
+                dari dosen yang gak suka warna biru.
+              </p>
+              
+              <p className="text-xl mb-6 leading-relaxed">
+                Kami percaya branding bagus itu kayak mantan toxic:{" "}
+                <span className="text-waras-orange font-bold">susah dilupain</span>.
+              </p>
+              
+              <div className="mt-8">
+                <div className="flex gap-4 flex-wrap">
+                  <span className="bg-waras-purple/20 border border-waras-purple text-white px-3 py-1 rounded-full text-sm">
+                    #KreatifStres
+                  </span>
+                  <span className="bg-waras-orange/20 border border-waras-orange text-white px-3 py-1 rounded-full text-sm">
+                    #IdeAbsurd
+                  </span>
+                  <span className="bg-waras-lime/20 border border-waras-lime text-waras-asphalt px-3 py-1 rounded-full text-sm">
+                    #RevisiMulu
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default AboutUs;

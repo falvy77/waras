@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,21 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// WARAS color scheme
+				waras: {
+					purple: '#7B2CBF',
+					lime: '#C6FF00',
+					orange: '#FF5400',
+					blue: '#00F0FF',
+					pink: '#FF4DA6',
+					asphalt: '#3E3E3E',
 				}
+			},
+			fontFamily: {
+				'space': ['Space Grotesk', 'sans-serif'],
+				'bebas': ['Bebas Neue', 'cursive'],
+				'panchang': ['Panchang', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +99,41 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'glitch': {
+					'0%': {
+						transform: 'translate(0)'
+					},
+					'20%': {
+						transform: 'translate(-5px, 5px)'
+					},
+					'40%': {
+						transform: 'translate(-5px, -5px)'
+					},
+					'60%': {
+						transform: 'translate(5px, 5px)'
+					},
+					'80%': {
+						transform: 'translate(5px, -5px)'
+					},
+					'100%': {
+						transform: 'translate(0)'
+					}
+				},
+				'float': {
+					'0%, 100%': {
+						transform: 'translateY(0)'
+					},
+					'50%': {
+						transform: 'translateY(-20px)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'glitch': 'glitch 0.5s ease-in-out infinite',
+				'float': 'float 6s ease-in-out infinite'
 			}
 		}
 	},
