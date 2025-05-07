@@ -23,8 +23,13 @@ const Index = () => {
   if (isLoading) {
     return (
       <div className="h-screen flex flex-col items-center justify-center bg-waras-asphalt">
-        <div className="relative">
-          <h1 className="text-5xl md:text-7xl font-bebas text-white glitch mb-4" data-text="WARAS">
+        <div className="relative mb-4">
+          <img 
+            src="/lovable-uploads/eecba1f8-b795-4472-8a2a-8247d377debb.png" 
+            alt="WARAS Logo" 
+            className="h-24 md:h-32 mb-6 animate-pulse"
+          />
+          <h1 className="text-5xl md:text-7xl font-bebas text-white glitch mb-2" data-text="WARAS">
             WARAS
           </h1>
         </div>
@@ -46,9 +51,16 @@ const Index = () => {
       <footer className="py-8 border-t border-white/10">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="mb-4 md:mb-0">
-              <h3 className="text-2xl font-bebas text-waras-lime">WARAS</h3>
-              <p className="text-sm text-gray-400">Branding Agency (Yang Masih Waras)</p>
+            <div className="mb-4 md:mb-0 flex items-center">
+              <img 
+                src="/lovable-uploads/eecba1f8-b795-4472-8a2a-8247d377debb.png" 
+                alt="WARAS Logo" 
+                className="h-8 mr-2"
+              />
+              <div>
+                <h3 className="text-2xl font-bebas text-waras-lime">WARAS</h3>
+                <p className="text-sm text-gray-400">Branding Agency (Yang Masih Waras)</p>
+              </div>
             </div>
             
             <div>

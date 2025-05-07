@@ -30,9 +30,14 @@ const NavBar = () => {
     <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-waras-asphalt/90 backdrop-blur-md py-2' : 'py-4'}`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center">
-          <h1 className="text-3xl font-bebas text-waras-lime">
-            <Link to="/">WARAS</Link>
-          </h1>
+          <Link to="/" className="flex items-center">
+            <img 
+              src="/lovable-uploads/eecba1f8-b795-4472-8a2a-8247d377debb.png" 
+              alt="WARAS Logo" 
+              className="h-10 mr-2"
+            />
+            <h1 className="text-3xl font-bebas text-waras-lime">WARAS</h1>
+          </Link>
         </div>
 
         {/* Desktop Navigation */}
@@ -65,6 +70,13 @@ const NavBar = () => {
       {/* Mobile Menu */}
       <div className={`md:hidden fixed inset-0 z-40 bg-waras-asphalt transition-all duration-300 ${menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
         <div className="flex flex-col h-full justify-center items-center space-y-8 pt-16">
+          <div className="mb-8">
+            <img 
+              src="/lovable-uploads/eecba1f8-b795-4472-8a2a-8247d377debb.png" 
+              alt="WARAS Logo" 
+              className="h-16 mx-auto mb-4"
+            />
+          </div>
           <button onClick={() => scrollToSection('about')} className="text-2xl text-white hover:text-waras-lime transition">
             Siapa Kami
           </button>
