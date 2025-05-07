@@ -27,7 +27,7 @@ const AboutUs = () => {
             inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          {/* "Photo" of founders */}
+          <img src="path/ke/487405758_1047572187427807_3880226450088928121_n.jpg" alt="Deskripsi gambar" width="200" height="100">
           <div className="w-full md:w-1/2 relative">
             <div className="sticky-note text-waras-asphalt -rotate-3">
               <div className="absolute top-0 right-0 w-16 h-16 bg-waras-pink opacity-20 rounded-full"></div>
