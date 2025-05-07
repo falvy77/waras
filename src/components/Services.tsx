@@ -26,12 +26,11 @@ const servicesList = [
     color: "bg-waras-lime",
     borderColor: "border-waras-lime",
     delay: 200,
-    textColor: "text-waras-asphalt"
   },
   {
     id: 4,
-    title: "Copywriting Yang Bikin Mikir dan Meringis",
-    description: "Text yang nggak cuma informatif tapi bikin orang tersenyum dan inget terus sama kamu.",
+    title: "Fotografi lighntning pake cahaya ilahi",
+    description: "Kami nggak cuma motret. Kami nangkep aura. Bahkan kalau produknya diem aja kayak kerupuk di etalase warteg, kami bikin dia kelihatan siap masuk galeri seni.",
     color: "bg-waras-pink",
     borderColor: "border-waras-pink",
     delay: 300
