@@ -70,7 +70,7 @@ const AboutUs = () => {
                   <span className="bg-waras-orange/20 border border-waras-orange text-white px-3 py-1 rounded-full text-sm">
                     #NasiGoreng
                   </span>
-                  <span className="bg-waras-lime/20 border border-waras-lime text-waras-asphalt px-3 py-1 rounded-full text-sm">
+                  <span className="bg-waras-lime/20 border border-waras-lime text-white px-3 py-1 rounded-full text-sm">
                     #Hahahihi
                   </span>
                 </div>
