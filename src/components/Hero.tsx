@@ -42,7 +42,7 @@ const Hero = () => {
         >
           <h1 
             className="text-5xl md:text-7xl font-bebas mb-4 glitch" 
-            data-text="Kami bikin branding sambil breakdown."
+            data-text="Kami stres, brand kamu beres."
           >
             Kami stres, brand kamu beres.
           </h1>
