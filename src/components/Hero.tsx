@@ -5,7 +5,12 @@ const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    setIsVisible(true);
+    // Set visibility after a small delay for animation to work properly
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 100);
+    
+    return () => clearTimeout(timer);
   }, []);
 
   const scrollToContact = () => {
