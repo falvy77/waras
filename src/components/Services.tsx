@@ -6,7 +6,7 @@ const servicesList = [
   {
     id: 1,
     title: "Logo Yang Bisa Ngomong",
-    description: "Logo itu tentang melawan kekosongan eksistensial, bukan cuma membuat sesuatu yang keren untuk dipajang di web. Kami bikin logo yang bisa bikin orang mikir, "Oke, ini bukan sekadar gambar, ini cerita."",
+    description: `Logo itu tentang melawan kekosongan eksistensial, bukan cuma membuat sesuatu yang keren untuk dipajang di web. Kami bikin logo yang bisa bikin orang mikir, "Oke, ini bukan sekadar gambar, ini cerita."`,
     color: "bg-waras-purple",
     borderColor: "border-waras-purple",
     delay: 0
@@ -14,7 +14,7 @@ const servicesList = [
   {
     id: 2,
     title: "Branding Biar Gak Disangka Jualan Gorengan",
-    description: "Branding versi kami bukan sekadar logo + warna. Kami gali nilai, kepribadian, sampai trauma masa kecil brand kamu — lalu kami bungkus jadi strategi visual yang bisa bikin klienmu ngerasa ‘ngerti lo banget’.",
+    description: "Branding versi kami bukan sekadar logo + warna. Kami gali nilai, kepribadian, sampai trauma masa kecil brand kamu — lalu kami bungkus jadi strategi visual yang bisa bikin klienmu ngerasa 'ngerti lo banget'.",
     color: "bg-waras-orange",
     borderColor: "border-waras-orange",
     delay: 100
