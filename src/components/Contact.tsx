@@ -62,8 +62,7 @@ const Contact = () => {
           </h2>
           
           <p className="text-xl text-center mb-12 text-gray-300">
-            Brand kamu juga lagi cari jati diri? Yuk, kami racikkan identitas baru — 
-            kayak nyari kepribadian di tengah deadline.
+            Kalau kamu baca ini sampai sini, itu tanda semesta. Kontak kami.
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
