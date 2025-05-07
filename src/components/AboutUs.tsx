@@ -16,8 +16,9 @@ const AboutUs = () => {
       
       <div className="container mx-auto px-4">
         <h2 className="text-4xl md:text-5xl font-bebas mb-16 text-center">
-          <span className="text-waras-lime">Agensi Dua Kepala</span>,{" "}
-          <span className="text-waras-pink">Banyak Kepala Pusing</span>
+          <span className="text-waras-lime">2 Kepala,</span>,{" "}
+          <span className="text-waras-pink">1 Visi,</span>
+          <span className="text-waras-pink">Dan 4 Cangkir Kopi Perhari</span>
         </h2>
         
         <div 
@@ -51,9 +52,9 @@ const AboutUs = () => {
           <div className="w-full md:w-1/2">
             <div className="bg-waras-asphalt/30 backdrop-blur-sm border border-white/10 p-6 rounded-lg">
               <p className="text-xl mb-6 leading-relaxed">
-                Kami bukan lulusan Harvard. Tapi kami pernah{" "}
-                <span className="text-waras-lime font-bold">survive revisi 17x</span>{" "}
-                dari dosen yang gak suka warna biru.
+                Banyak agensi bangga dengan portofolio. Kami bangga pernah{" "}
+                <span className="text-waras-lime font-bold">debat tiga jam gara-gara tone warna</span>{" "}
+                nasi goreng.
               </p>
               
               <p className="text-xl mb-6 leading-relaxed">
@@ -64,13 +65,13 @@ const AboutUs = () => {
               <div className="mt-8">
                 <div className="flex gap-4 flex-wrap">
                   <span className="bg-waras-purple/20 border border-waras-purple text-white px-3 py-1 rounded-full text-sm">
-                    #KreatifStres
+                    #Wongwaras
                   </span>
                   <span className="bg-waras-orange/20 border border-waras-orange text-white px-3 py-1 rounded-full text-sm">
-                    #IdeAbsurd
+                    #NasiGoreng
                   </span>
                   <span className="bg-waras-lime/20 border border-waras-lime text-waras-asphalt px-3 py-1 rounded-full text-sm">
-                    #RevisiMulu
+                    #Hahahihi
                   </span>
                 </div>
               </div>
