@@ -6,7 +6,7 @@ const servicesList = [
   {
     id: 1,
     title: "Logo Yang Bisa Ngomong",
-    description: "Bikin logo yang gak cuma enak diliat, tapi punya cerita dan nyambung sama brand kamu.",
+    description: "Logo itu tentang melawan kekosongan eksistensial, bukan cuma membuat sesuatu yang keren untuk dipajang di web. Kami bikin logo yang bisa bikin orang mikir, "Oke, ini bukan sekadar gambar, ini cerita."",
     color: "bg-waras-purple",
     borderColor: "border-waras-purple",
     delay: 0
@@ -14,15 +14,15 @@ const servicesList = [
   {
     id: 2,
     title: "Branding Biar Gak Disangka Jualan Gorengan",
-    description: "Identitas visual yang bikin orang langsung tahu kamu jualan apa tanpa perlu baca deskripsi.",
+    description: "Branding versi kami bukan sekadar logo + warna. Kami gali nilai, kepribadian, sampai trauma masa kecil brand kamu — lalu kami bungkus jadi strategi visual yang bisa bikin klienmu ngerasa ‘ngerti lo banget’.",
     color: "bg-waras-orange",
     borderColor: "border-waras-orange",
     delay: 100
   },
   {
     id: 3,
-    title: "Feed Sosmed Yang Nggak Garing",
-    description: "Konten yang bikin user stop scrolling dan sadar kalau brand kamu ada personality-nya.",
+    title: "Ngelola medsosmu kayak ngelola hidup",
+    description: "Strateginya? Campuran antara algoritma, insting, dan firasat setelah bangun tidur jam 1 siang.",
     color: "bg-waras-lime",
     borderColor: "border-waras-lime",
     delay: 200,
