@@ -149,7 +149,7 @@ const Contact = () => {
                 
                 <div className="space-y-4">
                   <a 
-                    href="https://wa.me/6281234567890" 
+                    href="https://wa.me/6282281702040" 
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 p-3 bg-waras-asphalt hover:bg-waras-asphalt/70 rounded-md transition-colors"
@@ -161,7 +161,7 @@ const Contact = () => {
                   </a>
                   
                   <a 
-                    href="https://instagram.com/waras.studio" 
+                    href="https://instagram.com/studiowaras" 
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 p-3 bg-waras-asphalt hover:bg-waras-asphalt/70 rounded-md transition-colors"
