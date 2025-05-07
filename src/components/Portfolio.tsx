@@ -5,25 +5,25 @@ import { useInView } from 'react-intersection-observer';
 const portfolioItems = [
   {
     id: 1,
-    client: "UMKM cabe bubuk",
-    problem: "Disangka merk racun tikus",
-    solution: "Branding ulang + logo cabe senyum",
+    client: "UMKM snack rumah ungu",
+    problem: "Dikira rumahnya ga ungu beneran",
+    solution: "Branding ulang + logo rumah snack",
     colorClass: "bg-waras-orange",
     imageText: "Mockup stiker kemasan dengan cabe yang tersenyum"
   },
   {
     id: 2,
-    client: "Therapist online",
-    problem: "Terkesan terlalu kaku dan formal",
-    solution: "Identitas visual yang hangat tapi profesional",
+    client: "Zaara Brownies",
+    problem: "Owner gaptek gabisa bikin marketing",
+    solution: "Identitas visual + social media campaign bonus packaging",
     colorClass: "bg-waras-blue",
     imageText: "Website dan business card dengan sentuhan personal"
   },
   {
     id: 3,
-    client: "Kafe lokal",
-    problem: "Tenggelam di antara kompetitor",
-    solution: "Konsep visual anti-mainstream yang memicu penasaran",
+    client: "Snack rumah ungu",
+    problem: "Customer sering nyasar",
+    solution: "Identitas Visual, sosmed, sama banner biar ga nyasar",
     colorClass: "bg-waras-lime",
     imageText: "Billboard absurd dan menu desain unik yang jadi pembicaraan"
   }
