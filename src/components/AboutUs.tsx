@@ -54,8 +54,8 @@ const AboutUs = () => {
           <div className="w-full md:w-1/2">
             <div className="bg-waras-asphalt/30 backdrop-blur-sm border border-white/10 p-6 rounded-lg">
               <p className="text-xl mb-6 leading-relaxed">
-                Banyak agensi bangga sama portofolionya. Kami bangga pernah{" "}
-                <span className="text-waras-lime font-bold">ribut tiga jam gara-gara tone warna</span>{" "}
+                Brand lain lahir dari strategi. Brand kami lahir dari{" "}
+                <span className="text-waras-lime font-bold">begadang, laptop bluescreen, dan kopi tumpah.</span>{" "}
                 nasi goreng.
               </p>
               
