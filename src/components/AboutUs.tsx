@@ -16,9 +16,9 @@ const AboutUs = () => {
       
       <div className="container mx-auto px-4">
         <h2 className="text-4xl md:text-5xl font-bebas mb-16 text-center">
-          <span className="text-waras-lime">2 Kepala,</span>,{" "}
+          <span className="text-waras-lime">2 Kepala</span>,{" "}
           <span className="text-waras-pink">1 Visi,</span>
-          <span className="text-waras-pink">Dan 4 Cangkir Kopi Perhari</span>
+          <span className="text-waras-orange">Dan 4 Cangkir Kopi Perhari</span>
         </h2>
         
         <div 
@@ -52,8 +52,8 @@ const AboutUs = () => {
           <div className="w-full md:w-1/2">
             <div className="bg-waras-asphalt/30 backdrop-blur-sm border border-white/10 p-6 rounded-lg">
               <p className="text-xl mb-6 leading-relaxed">
-                Banyak agensi bangga dengan portofolio. Kami bangga pernah{" "}
-                <span className="text-waras-lime font-bold">debat tiga jam gara-gara tone warna</span>{" "}
+                Banyak agensi sama portofolionya. Kami bangga pernah{" "}
+                <span className="text-waras-lime font-bold">ribut tiga jam gara-gara tone warna</span>{" "}
                 nasi goreng.
               </p>
               
