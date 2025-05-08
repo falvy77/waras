@@ -1,6 +1,7 @@
 
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { useInView } from 'react-intersection-observer';
+import { Avatar } from "@/components/ui/avatar";
 
 const AboutUs = () => {
   const { ref, inView } = useInView({
@@ -34,8 +35,11 @@ const AboutUs = () => {
               
               <div className="border-4 border-waras-asphalt p-2 bg-white mb-4">
                 <div className="h-64 bg-waras-asphalt flex items-center justify-center overflow-hidden">
-                  <p className="text-xl rotate-6 text-white px-4 py-2 bg-waras-pink">
-                  </p>
+                  <img 
+                    src="/lovable-uploads/b8696a67-b306-4ca0-9959-afd6b5c39462.png" 
+                    alt="WARAS Team" 
+                    className="h-full w-full object-cover"
+                  />
                 </div>
               </div>
               
