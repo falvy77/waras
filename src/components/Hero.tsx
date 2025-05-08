@@ -49,6 +49,7 @@ const Hero = () => {
           
           <p className="text-xl md:text-2xl mb-8 text-gray-300">
             Identitasmu kita racik dari secangkir kopi item.
+          </p>
           
           <div className="flex flex-col md:flex-row justify-center gap-4 mt-10">
             <button 

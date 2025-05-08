@@ -17,7 +17,7 @@ const AboutUs = () => {
       <div className="container mx-auto px-4">
         <h2 className="text-4xl md:text-5xl font-bebas mb-16 text-center">
           <span className="text-waras-lime">2 Kepala</span>,{" "}
-          <span className="text-waras-pink">1 Visi,</span>
+          <span className="text-waras-pink">1 Visi,</span>{" "}
           <span className="text-waras-orange">Dan 4 Cangkir Kopi Perhari</span>
         </h2>
         
@@ -27,7 +27,7 @@ const AboutUs = () => {
             inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <img src="path/ke/487405758_1047572187427807_3880226450088928121_n.jpg" alt="Deskripsi gambar" width="200" height="100">
+          <img src="/lovable-uploads/eecba1f8-b795-4472-8a2a-8247d377debb.png" alt="WARAS Logo" width="200" height="100" />
           <div className="w-full md:w-1/2 relative">
             <div className="sticky-note text-waras-asphalt -rotate-3">
               <div className="absolute top-0 right-0 w-16 h-16 bg-waras-pink opacity-20 rounded-full"></div>
@@ -36,7 +36,7 @@ const AboutUs = () => {
               <div className="border-4 border-waras-asphalt p-2 bg-white mb-4">
                 <div className="h-64 bg-waras-asphalt flex items-center justify-center overflow-hidden">
                   <p className="text-xl rotate-6 text-white px-4 py-2 bg-waras-pink">
-                    <img src="path/ke/487405758_1047572187427807_3880226450088928121_n.jpg" alt="Deskripsi gambar" width="200" height="100">
+                    <img src="/lovable-uploads/eecba1f8-b795-4472-8a2a-8247d377debb.png" alt="WARAS Logo" width="200" height="100" />
                   </p>
                 </div>
               </div>
