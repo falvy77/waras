@@ -56,7 +56,6 @@ const AboutUs = () => {
               <p className="text-xl mb-6 leading-relaxed">
                 Brand lain lahir dari strategi. Brand kami lahir dari{" "}
                 <span className="text-waras-lime font-bold">begadang, laptop bluescreen, dan kopi tumpah.</span>{" "}
-                nasi goreng.
               </p>
               
               <p className="text-xl mb-6 leading-relaxed">
