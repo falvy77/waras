@@ -9,7 +9,7 @@ const portfolioItems = [
     problem: "Dikira rumahnya ga ungu beneran",
     solution: "Branding ulang + logo rumah snack",
     colorClass: "bg-waras-orange",
-    imageText: "Mockup stiker kemasan dengan cabe yang tersenyum"
+    imageText: "Mockup stiker kemasan"
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const portfolioItems = [
     problem: "Owner gaptek gabisa bikin marketing",
     solution: "Identitas visual + social media campaign bonus packaging",
     colorClass: "bg-waras-blue",
-    imageText: "Website dan business card dengan sentuhan personal"
+    imageText: "Mockup packaging dan advertisement"
   },
   {
     id: 3,
@@ -25,7 +25,7 @@ const portfolioItems = [
     problem: "Customer sering nyasar",
     solution: "Identitas Visual, sosmed, sama banner biar ga nyasar",
     colorClass: "bg-waras-lime",
-    imageText: "Billboard absurd dan menu desain unik yang jadi pembicaraan"
+    imageText: "applied banner"
   }
 ];
 
