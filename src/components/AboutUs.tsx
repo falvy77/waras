@@ -61,7 +61,7 @@ const AboutUs = () => {
               
               <p className="text-xl mb-6 leading-relaxed">
                 Logo yang ngena tuh kayak lagu galau:{" "}
-                <span className="text-waras-orange font-bold">: gak perlu dijelasin, langsung kerasa</span>.
+                <span className="text-waras-orange font-bold">gak perlu dijelasin, langsung kerasa</span>.
               </p>
               
               <div className="mt-8">
