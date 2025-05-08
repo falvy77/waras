@@ -5,15 +5,15 @@ import { useInView } from 'react-intersection-observer';
 const testimonials = [
   {
     id: 1,
-    text: "Gue pikir agensi ini nipu. Ternyata beneran bisa.",
-    author: "Klien Beneran",
+    text: "Setelah kerja bareng Waras, saya gak cuma punya logo, saya punya alasan untuk hidup.",
+    author: "Brand Owner dan Survivor Quarter-Life Crisis",
     color: "bg-waras-purple",
     rotation: "-rotate-2"
   },
   {
     id: 2,
-    text: "Warna birunya bikin saya nangis, tapi hasil akhirnya cakep.",
-    author: "Klien Sensitive",
+    text: "Gue akhirnya ngerti kenapa feed gue dulu kayak tugas kelompok.",
+    author: "Lia - Jualan Kue Kering yang Feed-nya Lebih Garing dari Produknya",
     color: "bg-waras-orange",
     rotation: "rotate-2"
   },
@@ -27,8 +27,8 @@ const testimonials = [
   },
   {
     id: 4,
-    text: "Di revision ke-9 saya udah putus asa, tapi ternyata revision ke-10 langsung approve.",
-    author: "Klien Perfeksionis",
+    text: "Feed Instagram-nya sekarang keliatan premium banget, padahal isinya masih makaroni plastik kiloan.",
+    author: "Laila - CEO dadakan 'Snack By Rumah Ungu'",
     color: "bg-waras-pink",
     rotation: "rotate-1"
   }
