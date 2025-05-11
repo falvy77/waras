@@ -61,31 +61,24 @@ const detailedServices = [
   },
   {
     id: 4,
-    title: "Layout",
-    description: "Tata letak yang rapi, enak dilihat, dan nggak bikin mata lelah",
+    title: "Desain Logo",
+    description: "Logo yang memorable, bukan cuma aesthetic",
     icon: "✓",
     delay: 300
   },
   {
     id: 5,
-    title: "Desain Logo",
-    description: "Logo yang memorable, bukan cuma aesthetic",
+    title: "Merchandise",
+    description: "Merchandise yang orang bangga pakai, bukan langsung masuk lemari",
     icon: "✓",
     delay: 400
   },
   {
     id: 6,
-    title: "Merchandise",
-    description: "Merchandise yang orang bangga pakai, bukan langsung masuk lemari",
-    icon: "✓",
-    delay: 500
-  },
-  {
-    id: 7,
     title: "Fotografi",
     description: "Hasil foto yang bikin produk atau jasamu jadi lebih menarik dan profesional",
     icon: "✓",
-    delay: 600
+    delay: 500
   }
 ];
 
