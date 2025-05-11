@@ -155,8 +155,8 @@ const Services = () => {
         {/* New Our Services Section */}
         <div className="mt-32 mb-16">
           <h2 className="text-4xl md:text-5xl font-bebas mb-16 text-center">
-            Our Services
-            <span className="text-waras-lime"> (Secara Detail)</span>
+            What can we do for you...
+            <span className="text-waras-lime"></span>
           </h2>
 
           <div className="relative">
