@@ -1,7 +1,23 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { useInView } from 'react-intersection-observer';
+import { 
+  Dialog, 
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription
+} from "@/components/ui/dialog";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { ChevronRight, ImageIcon } from 'lucide-react';
 
+// Enhanced portfolio data with additional details for the modal
 const portfolioItems = [
   {
     id: 1,
@@ -9,7 +25,14 @@ const portfolioItems = [
     problem: "Dikira rumahnya ga ungu beneran",
     solution: "Branding ulang + logo rumah snack",
     colorClass: "bg-waras-orange",
-    imageText: "Mockup stiker kemasan"
+    imageText: "Mockup stiker kemasan",
+    detailedDescription: "Klien kami menghadapi masalah identitas brand yang membingungkan. Banyak konsumen mengira nama 'Rumah Ungu' hanya sebutan biasa, bukan merek sebenarnya. Kami melakukan branding ulang dengan menciptakan logo rumah berwarna ungu yang ikonik dan menarik.",
+    services: ["Desain Logo", "Branding", "Packaging Design"],
+    images: [
+      { id: 1, alt: "Logo Rumah Ungu", caption: "Logo baru dengan warna ungu yang khas" },
+      { id: 2, alt: "Packaging Stiker", caption: "Stiker kemasan dengan tema rumah ungu" },
+      { id: 3, alt: "Brand Guide", caption: "Panduan penggunaan brand untuk konsistensi" }
+    ]
   },
   {
     id: 2,
@@ -17,7 +40,14 @@ const portfolioItems = [
     problem: "Owner gaptek gabisa bikin marketing",
     solution: "Identitas visual + social media campaign bonus packaging",
     colorClass: "bg-waras-blue",
-    imageText: "Mockup packaging dan advertisement"
+    imageText: "Mockup packaging dan advertisement",
+    detailedDescription: "Pemilik Zaara Brownies kesulitan memasarkan produknya di dunia digital karena keterbatasan pengetahuan teknologi. Kami membuat solusi komprehensif dengan identitas visual yang kuat dan strategi media sosial yang mudah dijalankan.",
+    services: ["Identitas Visual", "Social Media Campaign", "Packaging Design", "Marketing Strategy"],
+    images: [
+      { id: 1, alt: "Zaara Logo", caption: "Logo baru dengan tema brownies premium" },
+      { id: 2, alt: "Kemasan Brownies", caption: "Desain kemasan menarik yang memperlihatkan produk" },
+      { id: 3, alt: "Media Sosial", caption: "Contoh konten media sosial yang siap pakai" }
+    ]
   },
   {
     id: 3,
@@ -25,7 +55,14 @@ const portfolioItems = [
     problem: "Customer sering nyasar",
     solution: "Identitas Visual, sosmed, sama banner biar ga nyasar",
     colorClass: "bg-waras-lime",
-    imageText: "applied banner"
+    imageText: "applied banner",
+    detailedDescription: "Customer sering kesulitan menemukan lokasi fisik toko snack rumah ungu. Kami mendesain sistem navigasi visual dengan banner yang eye-catching dan mencolok, serta pemanfaatan media sosial untuk berbagi lokasi dengan lebih jelas.",
+    services: ["Identitas Visual", "Banner Design", "Social Media Strategy", "Location Marketing"],
+    images: [
+      { id: 1, alt: "Banner Toko", caption: "Banner dengan desain yang mencolok dan mudah dilihat" },
+      { id: 2, alt: "Peta Lokasi", caption: "Desain peta lokasi yang user-friendly" },
+      { id: 3, alt: "Penanda Jalan", caption: "Penanda jalan dengan brand yang konsisten" }
+    ]
   }
 ];
 
@@ -34,6 +71,14 @@ const Portfolio = () => {
     threshold: 0.1,
     triggerOnce: true
   });
+
+  const [selectedItem, setSelectedItem] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = (item) => {
+    setSelectedItem(item);
+    setIsModalOpen(true);
+  };
 
   return (
     <section id="portfolio" className="py-20 relative noise">
@@ -65,9 +110,12 @@ const Portfolio = () => {
                 {/* Mockup Image Area */}
                 <div className="h-56 relative overflow-hidden flex items-center justify-center">
                   <div className={`absolute inset-0 ${item.colorClass} opacity-20`}></div>
-                  <p className="relative z-10 text-center px-8 font-bold italic">
-                    [ {item.imageText} ]
-                  </p>
+                  <div className="relative z-10 text-center px-8">
+                    <ImageIcon className="mx-auto mb-2 opacity-50" size={32} />
+                    <p className="font-bold italic">
+                      [ {item.imageText} ]
+                    </p>
+                  </div>
                 </div>
                 
                 {/* Content */}
@@ -90,8 +138,11 @@ const Portfolio = () => {
                   </div>
                   
                   <div className="flex justify-end">
-                    <button className="text-sm text-white/70 hover:text-white transition-colors">
-                      Mau lihat detail? →
+                    <button 
+                      onClick={() => openModal(item)} 
+                      className="flex items-center gap-1 text-sm bg-waras-asphalt/80 border border-white/10 px-3 py-1.5 rounded-md text-white/70 hover:text-white transition-colors hover:bg-waras-asphalt/90"
+                    >
+                      Lihat detail <ChevronRight size={16} />
                     </button>
                   </div>
                 </div>
@@ -100,6 +151,83 @@ const Portfolio = () => {
           ))}
         </div>
       </div>
+
+      {/* Detail Modal */}
+      <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
+        {selectedItem && (
+          <DialogContent className="bg-waras-asphalt border-white/10 text-white max-w-4xl">
+            <DialogHeader>
+              <DialogTitle className="text-2xl font-bebas">
+                {selectedItem.client} 
+                <span className={`inline-block ml-3 px-3 py-0.5 rounded text-sm ${selectedItem.colorClass === 'bg-waras-orange' ? 'bg-waras-orange/20 text-waras-orange' : selectedItem.colorClass === 'bg-waras-blue' ? 'bg-waras-blue/20 text-waras-blue' : 'bg-waras-lime/20 text-waras-lime'}`}>
+                  Case Study
+                </span>
+              </DialogTitle>
+              <DialogDescription className="text-white/70">
+                Permasalahan: <span className="text-waras-orange">{selectedItem.problem}</span>
+              </DialogDescription>
+            </DialogHeader>
+            
+            {/* Content */}
+            <div className="mt-4 space-y-8">
+              {/* Description */}
+              <div>
+                <h3 className="text-lg font-bold mb-2">Deskripsi Masalah & Solusi</h3>
+                <p className="text-white/80">{selectedItem.detailedDescription}</p>
+              </div>
+              
+              {/* Services */}
+              <div>
+                <h3 className="text-lg font-bold mb-2">Layanan yang Diberikan</h3>
+                <div className="flex flex-wrap gap-2">
+                  {selectedItem.services.map((service, index) => (
+                    <span 
+                      key={index} 
+                      className={`px-3 py-1 rounded-full text-sm ${
+                        selectedItem.colorClass === 'bg-waras-orange' 
+                        ? 'bg-waras-orange/20 text-waras-orange border border-waras-orange/30' 
+                        : selectedItem.colorClass === 'bg-waras-blue'
+                        ? 'bg-waras-blue/20 text-waras-blue border border-waras-blue/30'
+                        : 'bg-waras-lime/20 text-waras-lime border border-waras-lime/30'
+                      }`}
+                    >
+                      {service}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              
+              {/* Image Carousel */}
+              <div>
+                <h3 className="text-lg font-bold mb-4">Hasil Karya</h3>
+                <Carousel className="w-full">
+                  <CarouselContent>
+                    {selectedItem.images.map((image) => (
+                      <CarouselItem key={image.id}>
+                        <div className="p-1">
+                          <div className="bg-waras-asphalt/70 border border-white/5 rounded-lg overflow-hidden">
+                            <div className="h-56 flex items-center justify-center bg-gradient-to-br from-black/20 to-black/5">
+                              <div className="text-center p-8">
+                                <ImageIcon size={48} className="mx-auto mb-2 opacity-40" />
+                                <p className="font-bold text-xl">{image.alt}</p>
+                                <p className="text-white/60 mt-2">{image.caption}</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <div className="absolute -bottom-10 left-0 right-0 flex justify-center gap-4">
+                    <CarouselPrevious className="relative left-0 right-auto border-white/20 hover:bg-waras-asphalt/80 hover:border-white/40" />
+                    <CarouselNext className="relative left-0 right-auto border-white/20 hover:bg-waras-asphalt/80 hover:border-white/40" />
+                  </div>
+                </Carousel>
+              </div>
+            </div>
+          </DialogContent>
+        )}
+      </Dialog>
     </section>
   );
 };
