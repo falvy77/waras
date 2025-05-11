@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 
@@ -36,8 +37,65 @@ const servicesList = [
   }
 ];
 
+const detailedServices = [
+  {
+    id: 1,
+    title: "Branding Kit",
+    description: "Paket lengkap untuk brand yang butuh identitas visual yang konsisten dari A-Z",
+    icon: "✓",
+    delay: 0
+  },
+  {
+    id: 2,
+    title: "Feeds Instagram",
+    description: "Konten visual untuk media sosial yang bikin followers nggak bisa geser cepat-cepat",
+    icon: "✓",
+    delay: 100
+  },
+  {
+    id: 3,
+    title: "Desain Poster",
+    description: "Poster yang bikin orang berhenti scrolling dan mulai nyimak",
+    icon: "✓",
+    delay: 200
+  },
+  {
+    id: 4,
+    title: "Layout",
+    description: "Tata letak yang rapi, enak dilihat, dan nggak bikin mata lelah",
+    icon: "✓",
+    delay: 300
+  },
+  {
+    id: 5,
+    title: "Desain Logo",
+    description: "Logo yang memorable, bukan cuma aesthetic",
+    icon: "✓",
+    delay: 400
+  },
+  {
+    id: 6,
+    title: "Merchandise",
+    description: "Merchandise yang orang bangga pakai, bukan langsung masuk lemari",
+    icon: "✓",
+    delay: 500
+  },
+  {
+    id: 7,
+    title: "Fotografi",
+    description: "Hasil foto yang bikin produk atau jasamu jadi lebih menarik dan profesional",
+    icon: "✓",
+    delay: 600
+  }
+];
+
 const Services = () => {
   const { ref, inView } = useInView({
+    threshold: 0.1,
+    triggerOnce: true
+  });
+
+  const { ref: ref2, inView: inView2 } = useInView({
     threshold: 0.1,
     triggerOnce: true
   });
@@ -92,6 +150,55 @@ const Services = () => {
           <p className="text-xl italic text-gray-300">
             "Kalau kamu pengen desain yang cakep tapi gak ada isi — ya maaf, bukan di sini tempatnya."
           </p>
+        </div>
+
+        {/* New Our Services Section */}
+        <div className="mt-32 mb-16">
+          <h2 className="text-4xl md:text-5xl font-bebas mb-16 text-center">
+            Our Services
+            <span className="text-waras-lime"> (Secara Detail)</span>
+          </h2>
+
+          <div className="relative">
+            <div className="absolute inset-0 flex items-center justify-center opacity-10">
+              <img 
+                src="/lovable-uploads/6c1f8436-df9c-48cc-a5fc-f16c01be0d12.png"
+                alt="Studio WARAS Banner"
+                className="w-full max-w-4xl"
+              />
+            </div>
+            
+            <div ref={ref2} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 relative z-10">
+              {detailedServices.map((service) => (
+                <div
+                  key={service.id}
+                  className={`bg-waras-asphalt/40 backdrop-blur-sm border border-white/10 p-6 rounded-lg transition-all duration-500 ${
+                    inView2
+                    ? 'opacity-100 translate-y-0'
+                    : 'opacity-0 translate-y-10'
+                  }`}
+                  style={{ transitionDelay: `${service.delay}ms` }}
+                >
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="text-xl font-bold text-waras-lime">{service.icon}</span>
+                    <h3 className="text-xl font-bold">{service.title}</h3>
+                  </div>
+                  <p className="text-gray-300">{service.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-16 flex justify-center">
+            <div className="bg-waras-asphalt/60 backdrop-blur-sm border border-white/10 p-6 rounded-lg max-w-2xl">
+              <p className="text-center text-lg font-bebas text-waras-orange mb-2">
+                MENYEDIAKAN ANEKA JASA KREATIF
+              </p>
+              <p className="text-center text-sm text-gray-300">
+                Dan aneka jasa lain yang belum terdaftar di menu... Hubungi kami untuk kebutuhan khusus.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
