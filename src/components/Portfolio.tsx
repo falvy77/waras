@@ -56,6 +56,12 @@ const portfolioItems = [
     solution: "KAMII",
     colorClass: "bg-waras-lime",
     imageText: "LAGI NUNGGUIN BRAND KAMU BUAT DIPAJANG DISINI",
+    detailedDescription: "Brand Kamu",
+    services: ["Identitas Visual", "Social Media Campaign", "Packaging Design", "Marketing Strategy"],
+    images: [
+      { id: 1, alt: "Logo Kamu", caption: "Logo baru dengan tema premium" },
+      { id: 2, alt: "Kemasan Kamu", caption: "Desain kemasan menarik yang memperlihatkan produk" },
+      { id: 3, alt: "Media Sosial", caption: "Contoh konten media sosial yang siap pakai" }
     ]
 ];
 
