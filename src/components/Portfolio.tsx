@@ -35,20 +35,19 @@ const portfolioItems = [
     ]
   },
   {
-    id: 2,
-    client: "Zaara Brownies",
-    problem: "Owner gaptek gabisa bikin marketing",
-    solution: "Identitas visual + social media campaign bonus packaging",
-    colorClass: "bg-waras-blue",
-    imageText: "Mockup packaging dan advertisement",
-    detailedDescription: "Pemilik Zaara Brownies kesulitan memasarkan produknya di dunia digital karena keterbatasan pengetahuan teknologi. Kami membuat solusi komprehensif dengan identitas visual yang kuat dan strategi media sosial yang mudah dijalankan.",
-    services: ["Identitas Visual", "Social Media Campaign", "Packaging Design", "Marketing Strategy"],
+    id: 3,
+    client: "Snack rumah ungu",
+    problem: "Customer sering nyasar",
+    solution: "Identitas Visual, sosmed, sama banner biar ga nyasar",
+    colorClass: "bg-waras-lime",
+    imageText: "applied banner",
+    detailedDescription: "Customer sering kesulitan menemukan lokasi fisik toko snack rumah ungu. Kami mendesain sistem navigasi visual dengan banner yang eye-catching dan mencolok, serta pemanfaatan media sosial untuk berbagi lokasi dengan lebih jelas.",
+    services: ["Identitas Visual", "Banner Design", "Social Media Strategy", "Location Marketing"],
     images: [
-      { id: 1, alt: "Zaara Logo", caption: "Logo baru dengan tema brownies premium" },
-      { id: 2, alt: "Kemasan Brownies", caption: "Desain kemasan menarik yang memperlihatkan produk" },
-      { id: 3, alt: "Media Sosial", caption: "Contoh konten media sosial yang siap pakai" }
+      { id: 1, alt: "Banner Toko", caption: "Banner dengan desain yang mencolok dan mudah dilihat" },
+      { id: 2, alt: "Peta Lokasi", caption: "Desain peta lokasi yang user-friendly" },
+      { id: 3, alt: "Penanda Jalan", caption: "Penanda jalan dengan brand yang konsisten" }
     ]
-  }
 ];
 
 const Portfolio = () => {
