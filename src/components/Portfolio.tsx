@@ -15,7 +15,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { ChevronRight, ImageIcon } from 'lucide-react';
+import { ChevronRight, ImageIcon, PackageOpen, StarHalf } from 'lucide-react';
 
 // Enhanced portfolio data with additional details for the modal
 const portfolioItems = [
@@ -51,18 +51,20 @@ const portfolioItems = [
   },
   {
     id: 3,
-    client: "KAMUU",
+    client: "BRAND KAMU",
     problem: "Masih nyari jasa branding yang cocok",
-    solution: "KAMII",
+    solution: "WARAS",
     colorClass: "bg-waras-lime",
-    imageText: "LAGI NUNGGUIN BRAND KAMU BUAT DIPAJANG DISINI",
-    detailedDescription: "Brand Kamu",
-    services: ["Identitas Visual", "Social Media Campaign", "Packaging Design", "Marketing Strategy"],
+    imageText: "INI BISA JADI BRAND KAMU",
+    isCTA: true,
+    detailedDescription: "Apakah brand kamu membutuhkan sentuhan kreatif? WARAS siap membantu berbagai kebutuhan branding kamu, dari logo design hingga strategi marketing yang efektif.",
+    services: ["Desain Logo", "Identitas Visual", "Social Media Management", "Packaging Design", "Marketing Strategy"],
     images: [
-      { id: 1, alt: "Logo Kamu", caption: "Logo baru dengan tema premium" },
-      { id: 2, alt: "Kemasan Kamu", caption: "Desain kemasan menarik yang memperlihatkan produk" },
-      { id: 3, alt: "Media Sosial", caption: "Contoh konten media sosial yang siap pakai" }
+      { id: 1, alt: "Logo Kamu", caption: "Logo brand kamu yang unik dan memorable" },
+      { id: 2, alt: "Kemasan Kamu", caption: "Desain kemasan yang menarik perhatian" },
+      { id: 3, alt: "Media Sosial", caption: "Strategi media sosial yang menghasilkan" }
     ]
+  }
 ];
 
 const Portfolio = () => {
@@ -105,15 +107,26 @@ const Portfolio = () => {
               }`}
               style={{ transitionDelay: `${index * 200}ms` }}
             >
-              <div className={`h-full bg-waras-asphalt/50 backdrop-blur-sm border border-white/10 rounded-lg overflow-hidden hover:shadow-lg hover:shadow-${item.colorClass.split('-')[1]}/20 transition-all duration-300`}>
+              <div className={`h-full bg-waras-asphalt/50 backdrop-blur-sm border ${item.isCTA ? 'border-waras-lime/30 hover:border-waras-lime/70' : 'border-white/10'} rounded-lg overflow-hidden hover:shadow-lg hover:shadow-${item.colorClass.split('-')[1]}/20 transition-all duration-300`}>
                 {/* Mockup Image Area */}
-                <div className="h-56 relative overflow-hidden flex items-center justify-center">
+                <div className={`h-56 relative overflow-hidden flex items-center justify-center ${item.isCTA ? 'bg-gradient-to-br from-waras-lime/20 to-transparent' : ''}`}>
                   <div className={`absolute inset-0 ${item.colorClass} opacity-20`}></div>
                   <div className="relative z-10 text-center px-8">
-                    <ImageIcon className="mx-auto mb-2 opacity-50" size={32} />
-                    <p className="font-bold italic">
-                      [ {item.imageText} ]
-                    </p>
+                    {item.isCTA ? (
+                      <>
+                        <StarHalf className="mx-auto mb-2 opacity-70" size={40} />
+                        <p className="font-bold italic text-xl text-waras-lime">
+                          [ {item.imageText} ]
+                        </p>
+                      </>
+                    ) : (
+                      <>
+                        <ImageIcon className="mx-auto mb-2 opacity-50" size={32} />
+                        <p className="font-bold italic">
+                          [ {item.imageText} ]
+                        </p>
+                      </>
+                    )}
                   </div>
                 </div>
                 
@@ -122,7 +135,7 @@ const Portfolio = () => {
                   <div className="mb-6 flex flex-col gap-2">
                     <div className="flex items-center">
                       <span className="text-gray-400 w-24">Klien:</span>
-                      <span className="font-bold">{item.client}</span>
+                      <span className={`font-bold ${item.isCTA ? 'text-waras-lime' : ''}`}>{item.client}</span>
                     </div>
                     
                     <div className="flex items-center">
@@ -137,12 +150,21 @@ const Portfolio = () => {
                   </div>
                   
                   <div className="flex justify-end">
-                    <button 
-                      onClick={() => openModal(item)} 
-                      className="flex items-center gap-1 text-sm bg-waras-asphalt/80 border border-white/10 px-3 py-1.5 rounded-md text-white/70 hover:text-white transition-colors hover:bg-waras-asphalt/90"
-                    >
-                      Lihat detail <ChevronRight size={16} />
-                    </button>
+                    {item.isCTA ? (
+                      <button 
+                        onClick={() => openModal(item)} 
+                        className="flex items-center gap-1 text-sm bg-waras-lime text-waras-asphalt px-4 py-2 rounded-md font-medium hover:bg-waras-lime/90 transition-colors"
+                      >
+                        Order sekarang <ChevronRight size={16} />
+                      </button>
+                    ) : (
+                      <button 
+                        onClick={() => openModal(item)} 
+                        className="flex items-center gap-1 text-sm bg-waras-asphalt/80 border border-white/10 px-3 py-1.5 rounded-md text-white/70 hover:text-white transition-colors hover:bg-waras-asphalt/90"
+                      >
+                        Lihat detail <ChevronRight size={16} />
+                      </button>
+                    )}
                   </div>
                 </div>
               </div>
@@ -159,11 +181,15 @@ const Portfolio = () => {
               <DialogTitle className="text-2xl font-bebas">
                 {selectedItem.client} 
                 <span className={`inline-block ml-3 px-3 py-0.5 rounded text-sm ${selectedItem.colorClass === 'bg-waras-orange' ? 'bg-waras-orange/20 text-waras-orange' : selectedItem.colorClass === 'bg-waras-blue' ? 'bg-waras-blue/20 text-waras-blue' : 'bg-waras-lime/20 text-waras-lime'}`}>
-                  Case Study
+                  {selectedItem.isCTA ? 'Your Next Project' : 'Case Study'}
                 </span>
               </DialogTitle>
               <DialogDescription className="text-white/70">
-                Permasalahan: <span className="text-waras-orange">{selectedItem.problem}</span>
+                {selectedItem.isCTA ? (
+                  'Mari bekerja sama membuat brand kamu menjadi luar biasa!'
+                ) : (
+                  <>Permasalahan: <span className="text-waras-orange">{selectedItem.problem}</span></>
+                )}
               </DialogDescription>
             </DialogHeader>
             
@@ -171,13 +197,13 @@ const Portfolio = () => {
             <div className="mt-4 space-y-8">
               {/* Description */}
               <div>
-                <h3 className="text-lg font-bold mb-2">Deskripsi Masalah & Solusi</h3>
+                <h3 className="text-lg font-bold mb-2">{selectedItem.isCTA ? 'Kami Siap Membantu' : 'Deskripsi Masalah & Solusi'}</h3>
                 <p className="text-white/80">{selectedItem.detailedDescription}</p>
               </div>
               
               {/* Services */}
               <div>
-                <h3 className="text-lg font-bold mb-2">Layanan yang Diberikan</h3>
+                <h3 className="text-lg font-bold mb-2">{selectedItem.isCTA ? 'Layanan yang Bisa Kami Berikan' : 'Layanan yang Diberikan'}</h3>
                 <div className="flex flex-wrap gap-2">
                   {selectedItem.services.map((service, index) => (
                     <span 
@@ -198,7 +224,7 @@ const Portfolio = () => {
               
               {/* Image Carousel */}
               <div>
-                <h3 className="text-lg font-bold mb-4">Hasil Karya</h3>
+                <h3 className="text-lg font-bold mb-4">{selectedItem.isCTA ? 'Preview Hasil Potensial' : 'Hasil Karya'}</h3>
                 <Carousel className="w-full">
                   <CarouselContent>
                     {selectedItem.images.map((image) => (
@@ -223,6 +249,21 @@ const Portfolio = () => {
                   </div>
                 </Carousel>
               </div>
+              
+              {/* Call to Action Button - Only for CTA item */}
+              {selectedItem.isCTA && (
+                <div className="pt-4 flex justify-center">
+                  <button 
+                    className="bg-waras-lime text-waras-asphalt font-medium px-6 py-3 rounded-md flex items-center gap-2 hover:bg-waras-lime/90 transition-all"
+                    onClick={() => {
+                      setIsModalOpen(false);
+                      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                    }}
+                  >
+                    <PackageOpen size={18} /> Mulai Proyek Kamu Sekarang
+                  </button>
+                </div>
+              )}
             </div>
           </DialogContent>
         )}
