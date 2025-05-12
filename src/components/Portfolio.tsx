@@ -51,9 +51,9 @@ const portfolioItems = [
   },
   {
     id: 3,
-    client: "BRAND KAMU",
+    client: "KAMU",
     problem: "Masih nyari jasa branding yang cocok",
-    solution: "WARAS",
+    solution: "KAMI",
     colorClass: "bg-waras-lime",
     imageText: "INI BISA JADI BRAND KAMU",
     isCTA: true,
