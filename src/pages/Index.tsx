@@ -7,6 +7,7 @@ import Services from '../components/Services';
 import Portfolio from '../components/Portfolio';
 import Testimonials from '../components/Testimonials';
 import Contact from '../components/Contact';
+import LanguageSelector from '../components/LanguageSelector';
 
 const Index = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -40,6 +41,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-waras-asphalt relative overflow-x-hidden noise">
+      <LanguageSelector />
       <NavBar />
       <Hero />
       <AboutUs />
