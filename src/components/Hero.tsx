@@ -42,13 +42,13 @@ const Hero = () => {
         >
           <h1 
             className="text-5xl md:text-7xl font-bebas mb-4 glitch" 
-            data-text="We stress, so your brand can impress."
+            data-text="Kami stress, agar brand kamu bisa impress."
           >
-            We stress, so your brand can impress.
+            Kami stress, agar brand kamu bisa impress.
           </h1>
           
           <p className="text-xl md:text-2xl mb-8 text-gray-300">
-            We brew your identity from a cup of black coffee.
+            Kami menyeduh identitasmu dari secangkir kopi hitam.
           </p>
           
           <div className="flex flex-col md:flex-row justify-center gap-4 mt-10">
@@ -56,14 +56,14 @@ const Hero = () => {
               onClick={scrollToPortfolio}
               className="waras-button waras-button-primary text-lg"
             >
-              See Our Work
+              Lihat Karya Kami
             </button>
             
             <button 
               onClick={scrollToContact}
               className="waras-button waras-button-secondary text-lg"
             >
-              Chat First, Business Later
+              Ngobrol Dulu, Bisnis Belakangan
             </button>
           </div>
         </div>
@@ -71,7 +71,7 @@ const Hero = () => {
       
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
-        <span className="text-sm text-gray-400 mb-2">Scroll Down</span>
+        <span className="text-sm text-gray-400 mb-2">Gulir ke Bawah</span>
         <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-gray-400 rounded-full mt-2 animate-bounce"></div>
         </div>

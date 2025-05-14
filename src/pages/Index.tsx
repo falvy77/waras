@@ -59,13 +59,13 @@ const Index = () => {
               />
               <div>
                 <h3 className="text-2xl font-bebas text-waras-lime">WARAS</h3>
-                <p className="text-sm text-gray-400">Branding Agency (Still Sane)</p>
+                <p className="text-sm text-gray-400">Branding Agency (Masih Waras)</p>
               </div>
             </div>
             
             <div>
               <p className="text-sm text-gray-400">
-                © {new Date().getFullYear()} WARAS Studio. All rights reserved.
+                © {new Date().getFullYear()} WARAS Studio. Hak cipta dilindungi.
               </p>
             </div>
           </div>

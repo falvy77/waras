@@ -43,16 +43,16 @@ const NavBar = () => {
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-8 items-center">
           <button onClick={() => scrollToSection('about')} className="text-white hover:text-waras-lime transition">
-            About Us
+            Tentang Kami
           </button>
           <button onClick={() => scrollToSection('services')} className="text-white hover:text-waras-lime transition">
-            Services
+            Layanan
           </button>
           <button onClick={() => scrollToSection('portfolio')} className="text-white hover:text-waras-lime transition">
-            Portfolio
+            Portofolio
           </button>
           <button onClick={() => scrollToSection('contact')} className="waras-button waras-button-primary">
-            Contact
+            Kontak
           </button>
         </div>
 
@@ -78,16 +78,16 @@ const NavBar = () => {
             />
           </div>
           <button onClick={() => scrollToSection('about')} className="text-2xl text-white hover:text-waras-lime transition">
-            About Us
+            Tentang Kami
           </button>
           <button onClick={() => scrollToSection('services')} className="text-2xl text-white hover:text-waras-lime transition">
-            Services
+            Layanan
           </button>
           <button onClick={() => scrollToSection('portfolio')} className="text-2xl text-white hover:text-waras-lime transition">
-            Portfolio
+            Portofolio
           </button>
           <button onClick={() => scrollToSection('contact')} className="waras-button waras-button-primary text-2xl">
-            Contact
+            Kontak
           </button>
         </div>
       </div>

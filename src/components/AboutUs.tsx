@@ -17,9 +17,9 @@ const AboutUs = () => {
       
       <div className="container mx-auto px-4">
         <h2 className="text-4xl md:text-5xl font-bebas mb-16 text-center">
-          <span className="text-waras-lime">2 Heads</span>,{" "}
-          <span className="text-waras-pink">1 Vision,</span>{" "}
-          <span className="text-waras-orange">And 4 Cups of Coffee Daily</span>
+          <span className="text-waras-lime">2 Kepala</span>,{" "}
+          <span className="text-waras-pink">1 Visi,</span>{" "}
+          <span className="text-waras-orange">Dan 4 Cangkir Kopi Sehari</span>
         </h2>
         
         <div 
@@ -44,8 +44,8 @@ const AboutUs = () => {
               </div>
               
               <div className="flex justify-between items-center">
-                <p className="text-sm font-bold">TEAM WARAS, 2025</p>
-                <p className="text-xs">Coffee Break</p>
+                <p className="text-sm font-bold">TIM WARAS, 2025</p>
+                <p className="text-xs">Istirahat Kopi</p>
               </div>
             </div>
           </div>
@@ -54,22 +54,22 @@ const AboutUs = () => {
           <div className="w-full md:w-1/2">
             <div className="bg-waras-asphalt/30 backdrop-blur-sm border border-white/10 p-6 rounded-lg">
               <p className="text-xl mb-6 leading-relaxed">
-                Other brands are born from strategy. Our brands are born from{" "}
-                <span className="text-waras-lime font-bold">all-nighters, blue screens, and spilled coffee.</span>{" "}
+                Brand lain lahir dari strategi. Brand kami lahir dari{" "}
+                <span className="text-waras-lime font-bold">begadang, layar biru, dan tumpahan kopi.</span>{" "}
               </p>
               
               <p className="text-xl mb-6 leading-relaxed">
-                A good logo is like a sad song:{" "}
-                <span className="text-waras-orange font-bold">no explanations needed, just pure emotion</span>.
+                Logo yang bagus itu seperti lagu sedih:{" "}
+                <span className="text-waras-orange font-bold">tak perlu penjelasan, cukup dengan perasaan</span>.
               </p>
               
               <div className="mt-8">
                 <div className="flex gap-4 flex-wrap">
                   <span className="bg-waras-purple/20 border border-waras-purple text-white px-3 py-1 rounded-full text-sm">
-                    #StillSane
+                    #MasihWaras
                   </span>
                   <span className="bg-waras-orange/20 border border-waras-orange text-white px-3 py-1 rounded-full text-sm">
-                    #FriedRice
+                    #NasGoreng
                   </span>
                   <span className="bg-waras-lime/20 border border-waras-lime text-white px-3 py-1 rounded-full text-sm">
                     #HaHaHiHi

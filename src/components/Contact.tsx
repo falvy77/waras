@@ -57,23 +57,23 @@ const Contact = () => {
           }`}
         >
           <h2 className="text-4xl md:text-5xl font-bebas mb-6 text-center">
-            <span className="text-waras-lime">Chat First</span>, 
-            <span className="text-white"> Business Later</span>
+            <span className="text-waras-lime">Ngobrol Dulu</span>, 
+            <span className="text-white"> Bisnis Belakangan</span>
           </h2>
           
           <p className="text-xl text-center mb-12 text-gray-300">
-            If you've read this far, it's a sign from the universe. Contact us.
+            Kalau sudah baca sampai sini, ini pertanda dari alam. Hubungi kami.
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Contact Form */}
             <div className="bg-waras-asphalt/50 backdrop-blur-sm border border-white/10 p-6 rounded-lg">
-              <h3 className="text-2xl font-bold mb-6">Fill Out The Form</h3>
+              <h3 className="text-2xl font-bold mb-6">Isi Formulir</h3>
               
               <form onSubmit={handleSubmit}>
                 <div className="mb-4">
                   <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-1">
-                    Name (nickname is fine)
+                    Nama (nama panggilan juga boleh)
                   </label>
                   <input
                     type="text"
@@ -83,13 +83,13 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     className="w-full bg-waras-asphalt/80 border border-white/20 rounded-md px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-waras-lime"
-                    placeholder="What's your name?"
+                    placeholder="Siapa nama kamu?"
                   />
                 </div>
                 
                 <div className="mb-4">
                   <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-1">
-                    Email (a real one please)
+                    Email (yang beneran ya)
                   </label>
                   <input
                     type="email"
@@ -99,13 +99,13 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     className="w-full bg-waras-asphalt/80 border border-white/20 rounded-md px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-waras-lime"
-                    placeholder="email@yours.com"
+                    placeholder="email@kamu.com"
                   />
                 </div>
                 
                 <div className="mb-6">
                   <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-1">
-                    What would you like to tell us?
+                    Apa yang ingin kamu sampaikan?
                   </label>
                   <textarea
                     id="message"
@@ -115,7 +115,7 @@ const Contact = () => {
                     required
                     rows={4}
                     className="w-full bg-waras-asphalt/80 border border-white/20 rounded-md px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-waras-lime"
-                    placeholder="Tell us about your brand or challenges you're facing..."
+                    placeholder="Ceritakan tentang brand kamu atau tantangan yang kamu hadapi..."
                   ></textarea>
                 </div>
                 
@@ -125,17 +125,17 @@ const Contact = () => {
                   className="waras-button waras-button-primary w-full flex justify-center items-center"
                 >
                   {submitStatus === 'submitting' ? (
-                    <span>Sending...</span>
+                    <span>Mengirim...</span>
                   ) : submitStatus === 'success' ? (
-                    <span>Sent! We'll get back to you soon.</span>
+                    <span>Terkirim! Kami akan segera menghubungi kamu.</span>
                   ) : (
-                    <span>Send Message</span>
+                    <span>Kirim Pesan</span>
                   )}
                 </button>
                 
                 {submitStatus === 'error' && (
                   <p className="mt-3 text-waras-orange text-sm">
-                    There was an error sending your message. Let's try again!
+                    Terjadi kesalahan saat mengirim pesan. Mari coba lagi!
                   </p>
                 )}
               </form>
@@ -144,7 +144,7 @@ const Contact = () => {
             {/* Contact Details */}
             <div>
               <div className="mb-8 bg-waras-asphalt/50 backdrop-blur-sm border border-white/10 p-6 rounded-lg">
-                <h3 className="text-2xl font-bold mb-4">Direct Contact</h3>
+                <h3 className="text-2xl font-bold mb-4">Kontak Langsung</h3>
                 
                 <div className="space-y-4">
                   <a 
@@ -156,7 +156,7 @@ const Contact = () => {
                     <div className="w-10 h-10 rounded-full bg-[#25D366] flex items-center justify-center flex-shrink-0">
                       <span className="text-white">WA</span>
                     </div>
-                    <span>Chat on WhatsApp</span>
+                    <span>Chat di WhatsApp</span>
                   </a>
                   
                   <a 
@@ -168,7 +168,7 @@ const Contact = () => {
                     <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#833AB4] via-[#FD1D1D] to-[#FCAF45] flex items-center justify-center flex-shrink-0">
                       <span className="text-white">IG</span>
                     </div>
-                    <span>Send a DM on Instagram</span>
+                    <span>Kirim DM di Instagram</span>
                   </a>
                   
                   <a 
@@ -178,14 +178,14 @@ const Contact = () => {
                     <div className="w-10 h-10 rounded-full bg-waras-blue flex items-center justify-center flex-shrink-0">
                       <span className="text-white">@</span>
                     </div>
-                    <span>Email at hello@waras.studio</span>
+                    <span>Email ke hello@waras.studio</span>
                   </a>
                 </div>
               </div>
               
               <div className="p-6 bg-waras-purple/30 backdrop-blur-sm border border-waras-purple/30 rounded-lg">
                 <p className="italic text-gray-300 text-center">
-                  "We can discuss your wild ideas. But don't get too wild and forget to pay the invoice."
+                  "Kita bisa bahas ide-ide liar kamu. Tapi jangan terlalu liar sampai lupa bayar invoice."
                 </p>
               </div>
             </div>

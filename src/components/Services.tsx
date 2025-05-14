@@ -5,32 +5,32 @@ import { useInView } from 'react-intersection-observer';
 const servicesList = [
   {
     id: 1,
-    title: "Logos That Speak",
-    description: `A logo is about fighting existential emptiness, not just making something cool for your website. We create logos that make people think, "This isn't just an image, it's a story."`,
+    title: "Logo yang Berbicara",
+    description: `Logo bukan hanya tentang membuat sesuatu yang keren untuk website. Kami membuat logo yang membuat orang berpikir, "Ini bukan hanya gambar, ini adalah cerita."`,
     color: "bg-waras-purple",
     borderColor: "border-waras-purple",
     delay: 0
   },
   {
     id: 2,
-    title: "Branding That Doesn't Look Amateur",
-    description: "Our branding isn't just a logo + colors. We dig into values, personality, and even your brand's childhood trauma — then wrap it into a visual strategy that makes your clients feel 'deeply understood'.",
+    title: "Branding yang Tidak Terlihat Amatir",
+    description: "Branding kami bukan hanya logo + warna. Kami menggali nilai, kepribadian, dan bahkan trauma masa kecil brand kamu - lalu membungkusnya dalam strategi visual yang membuat klien merasakan 'sangat dipahami'.",
     color: "bg-waras-orange",
     borderColor: "border-waras-orange",
     delay: 100
   },
   {
     id: 3,
-    title: "Managing Your Social Media Like Life",
-    description: "The strategy? A mix of algorithms, instinct, and premonitions after waking up at 1 PM.",
+    title: "Mengelola Media Sosial Seperti Kehidupan",
+    description: "Strategi? Campuran algoritma, insting, dan firasat setelah bangun jam 1 siang.",
     color: "bg-waras-lime",
     borderColor: "border-waras-lime",
     delay: 200,
   },
   {
     id: 4,
-    title: "Photography with Divine Light",
-    description: "We don't just take photos. We capture auras. Even if your product sits still like crackers in a display case, we make it look gallery-worthy.",
+    title: "Fotografi dengan Cahaya Ilahi",
+    description: "Kami tidak hanya mengambil foto. Kami menangkap aura. Meskipun produk kamu hanya diam seperti kerupuk di etalase, kami membuatnya terlihat layak galeri.",
     color: "bg-waras-pink",
     borderColor: "border-waras-pink",
     delay: 300
@@ -40,43 +40,43 @@ const servicesList = [
 const detailedServices = [
   {
     id: 1,
-    title: "Branding Kit",
-    description: "Complete package for brands needing a consistent visual identity from A to Z",
+    title: "Paket Branding",
+    description: "Paket lengkap untuk brand yang membutuhkan identitas visual yang konsisten dari A sampai Z",
     icon: "✓",
     delay: 0
   },
   {
     id: 2,
-    title: "Instagram Feeds",
-    description: "Visual content for social media that makes followers stop scrolling",
+    title: "Feed Instagram",
+    description: "Konten visual untuk media sosial yang membuat pengikut berhenti scroll",
     icon: "✓",
     delay: 100
   },
   {
     id: 3,
-    title: "Poster Design",
-    description: "Posters that make people stop scrolling and start paying attention",
+    title: "Desain Poster",
+    description: "Poster yang membuat orang berhenti scrolling dan mulai memperhatikan",
     icon: "✓",
     delay: 200
   },
   {
     id: 4,
-    title: "Logo Design",
-    description: "Memorable logos, not just aesthetic ones",
+    title: "Desain Logo",
+    description: "Logo yang berkesan, bukan hanya indah",
     icon: "✓",
     delay: 300
   },
   {
     id: 5,
     title: "Merchandise",
-    description: "Merchandise people are proud to use, not just store in drawers",
+    description: "Merchandise yang orang bangga gunakan, bukan hanya disimpan di laci",
     icon: "✓",
     delay: 400
   },
   {
     id: 6,
-    title: "Photography",
-    description: "Photos that make your products or services more attractive and professional",
+    title: "Fotografi",
+    description: "Foto yang membuat produk atau layanan kamu lebih menarik dan profesional",
     icon: "✓",
     delay: 500
   }

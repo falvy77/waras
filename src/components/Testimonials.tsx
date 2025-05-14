@@ -5,30 +5,30 @@ import { useInView } from 'react-intersection-observer';
 const testimonials = [
   {
     id: 1,
-    text: "After working with Waras, I don't just have a logo, I have a reason to live.",
-    author: "Brand Owner and Quarter-Life Crisis Survivor",
+    text: "Setelah bekerja dengan Waras, saya tidak hanya punya logo, tapi juga alasan untuk hidup.",
+    author: "Pemilik Brand dan Penyintas Krisis Seperempat Abad",
     color: "bg-waras-purple",
     rotation: "-rotate-2"
   },
   {
     id: 2,
-    text: "I finally understand why my feed used to look like a group project.",
-    author: "Lia - Cookie Seller with a Feed More Crisp Than Her Products",
+    text: "Akhirnya saya paham kenapa feed saya dulu terlihat seperti proyek kelompok.",
+    author: "Lia - Penjual Kue dengan Feed Lebih Renyah daripada Produknya",
     color: "bg-waras-orange",
     rotation: "rotate-2"
   },
   {
     id: 3,
-    text: "I was worried because the designer talked to himself a lot, but the delivery was on point!",
-    author: "A Patient Client",
+    text: "Saya cemas karena designernya sering ngomong sendiri, tapi hasilnya tepat sasaran!",
+    author: "Klien yang Sabar",
     color: "bg-waras-lime",
     rotation: "-rotate-1",
     textColor: "text-waras-asphalt"
   },
   {
     id: 4,
-    text: "My Instagram feed now looks super premium, even though it's still just packaged snacks.",
-    author: "Laila - Impromptu CEO of 'Snack By Purple House'",
+    text: "Feed Instagram saya sekarang terlihat super premium, meskipun isinya tetap cuma cemilan kemasan.",
+    author: "Laila - CEO Dadakan dari 'Snack By Purple House'",
     color: "bg-waras-pink",
     rotation: "rotate-1"
   }
