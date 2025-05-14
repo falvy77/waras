@@ -5,30 +5,30 @@ import { useInView } from 'react-intersection-observer';
 const testimonials = [
   {
     id: 1,
-    text: "Setelah kerja bareng Waras, saya gak cuma punya logo, saya punya alasan untuk hidup.",
-    author: "Brand Owner dan Survivor Quarter-Life Crisis",
+    text: "After working with Waras, I don't just have a logo, I have a reason to live.",
+    author: "Brand Owner and Quarter-Life Crisis Survivor",
     color: "bg-waras-purple",
     rotation: "-rotate-2"
   },
   {
     id: 2,
-    text: "Gue akhirnya ngerti kenapa feed gue dulu kayak tugas kelompok.",
-    author: "Lia - Jualan Kue Kering yang Feed-nya Lebih Garing dari Produknya",
+    text: "I finally understand why my feed used to look like a group project.",
+    author: "Lia - Cookie Seller with a Feed More Crisp Than Her Products",
     color: "bg-waras-orange",
     rotation: "rotate-2"
   },
   {
     id: 3,
-    text: "Sempat khawatir karena desainernya suka ngomong sendiri, tapi deliverynya on point!",
-    author: "Klien Yang Sabar",
+    text: "I was worried because the designer talked to himself a lot, but the delivery was on point!",
+    author: "A Patient Client",
     color: "bg-waras-lime",
     rotation: "-rotate-1",
     textColor: "text-waras-asphalt"
   },
   {
     id: 4,
-    text: "Feed Instagram-nya sekarang keliatan premium banget, padahal isinya masih makaroni plastik kiloan.",
-    author: "Laila - CEO dadakan 'Snack By Rumah Ungu'",
+    text: "My Instagram feed now looks super premium, even though it's still just packaged snacks.",
+    author: "Laila - Impromptu CEO of 'Snack By Purple House'",
     color: "bg-waras-pink",
     rotation: "rotate-1"
   }
@@ -57,7 +57,7 @@ const Testimonials = () => {
       
       <div className="container mx-auto px-4">
         <h2 className="text-4xl md:text-5xl font-bebas mb-16 text-center text-waras-pink">
-          Testimoni Klien
+          Client Testimonials
         </h2>
         
         <div 

@@ -42,13 +42,13 @@ const Hero = () => {
         >
           <h1 
             className="text-5xl md:text-7xl font-bebas mb-4 glitch" 
-            data-text="Kami stres, brand kamu beres."
+            data-text="We stress, so your brand can impress."
           >
-            Kami stres, brand kamu beres.
+            We stress, so your brand can impress.
           </h1>
           
           <p className="text-xl md:text-2xl mb-8 text-gray-300">
-            Identitasmu kita racik dari secangkir kopi item.
+            We brew your identity from a cup of black coffee.
           </p>
           
           <div className="flex flex-col md:flex-row justify-center gap-4 mt-10">
@@ -56,14 +56,14 @@ const Hero = () => {
               onClick={scrollToPortfolio}
               className="waras-button waras-button-primary text-lg"
             >
-              Lihat Aksi Kami
+              See Our Work
             </button>
             
             <button 
               onClick={scrollToContact}
               className="waras-button waras-button-secondary text-lg"
             >
-              Ngobrol Dulu, Serius Belakangan
+              Chat First, Business Later
             </button>
           </div>
         </div>

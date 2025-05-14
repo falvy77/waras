@@ -5,32 +5,32 @@ import { useInView } from 'react-intersection-observer';
 const servicesList = [
   {
     id: 1,
-    title: "Logo Yang Bisa Ngomong",
-    description: `Logo itu tentang melawan kekosongan eksistensial, bukan cuma membuat sesuatu yang keren untuk dipajang di web. Kami bikin logo yang bisa bikin orang mikir, "Oke, ini bukan sekadar gambar, ini cerita."`,
+    title: "Logos That Speak",
+    description: `A logo is about fighting existential emptiness, not just making something cool for your website. We create logos that make people think, "This isn't just an image, it's a story."`,
     color: "bg-waras-purple",
     borderColor: "border-waras-purple",
     delay: 0
   },
   {
     id: 2,
-    title: "Branding Biar Gak Disangka Jualan Gorengan",
-    description: "Branding versi kami bukan sekadar logo + warna. Kami gali nilai, kepribadian, sampai trauma masa kecil brand kamu — lalu kami bungkus jadi strategi visual yang bisa bikin klienmu ngerasa 'ngerti lo banget'.",
+    title: "Branding That Doesn't Look Amateur",
+    description: "Our branding isn't just a logo + colors. We dig into values, personality, and even your brand's childhood trauma — then wrap it into a visual strategy that makes your clients feel 'deeply understood'.",
     color: "bg-waras-orange",
     borderColor: "border-waras-orange",
     delay: 100
   },
   {
     id: 3,
-    title: "Ngelola medsosmu kayak ngelola hidup",
-    description: "Strateginya? Campuran antara algoritma, insting, dan firasat setelah bangun tidur jam 1 siang.",
+    title: "Managing Your Social Media Like Life",
+    description: "The strategy? A mix of algorithms, instinct, and premonitions after waking up at 1 PM.",
     color: "bg-waras-lime",
     borderColor: "border-waras-lime",
     delay: 200,
   },
   {
     id: 4,
-    title: "Fotografi lighntning pake cahaya ilahi",
-    description: "Kami nggak cuma motret. Kami nangkep aura. Bahkan kalau produknya diem aja kayak kerupuk di etalase warteg, kami bikin dia kelihatan siap masuk galeri seni.",
+    title: "Photography with Divine Light",
+    description: "We don't just take photos. We capture auras. Even if your product sits still like crackers in a display case, we make it look gallery-worthy.",
     color: "bg-waras-pink",
     borderColor: "border-waras-pink",
     delay: 300
@@ -41,42 +41,42 @@ const detailedServices = [
   {
     id: 1,
     title: "Branding Kit",
-    description: "Paket lengkap untuk brand yang butuh identitas visual yang konsisten dari A-Z",
+    description: "Complete package for brands needing a consistent visual identity from A to Z",
     icon: "✓",
     delay: 0
   },
   {
     id: 2,
-    title: "Feeds Instagram",
-    description: "Konten visual untuk media sosial yang bikin followers nggak bisa geser cepat-cepat",
+    title: "Instagram Feeds",
+    description: "Visual content for social media that makes followers stop scrolling",
     icon: "✓",
     delay: 100
   },
   {
     id: 3,
-    title: "Desain Poster",
-    description: "Poster yang bikin orang berhenti scrolling dan mulai nyimak",
+    title: "Poster Design",
+    description: "Posters that make people stop scrolling and start paying attention",
     icon: "✓",
     delay: 200
   },
   {
     id: 4,
-    title: "Desain Logo",
-    description: "Logo yang memorable, bukan cuma aesthetic",
+    title: "Logo Design",
+    description: "Memorable logos, not just aesthetic ones",
     icon: "✓",
     delay: 300
   },
   {
     id: 5,
     title: "Merchandise",
-    description: "Merchandise yang orang bangga pakai, bukan langsung masuk lemari",
+    description: "Merchandise people are proud to use, not just store in drawers",
     icon: "✓",
     delay: 400
   },
   {
     id: 6,
-    title: "Fotografi",
-    description: "Hasil foto yang bikin produk atau jasamu jadi lebih menarik dan profesional",
+    title: "Photography",
+    description: "Photos that make your products or services more attractive and professional",
     icon: "✓",
     delay: 500
   }
@@ -101,8 +101,8 @@ const Services = () => {
       
       <div className="container mx-auto px-4">
         <h2 className="text-4xl md:text-5xl font-bebas mb-6 text-center">
-          Yang Bisa Kami Lakuin
-          <span className="text-waras-orange"> (Selain Overthinking)</span>
+          What We Can Do
+          <span className="text-waras-orange"> (Besides Overthinking)</span>
         </h2>
         
         <div ref={ref} className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
@@ -141,7 +141,7 @@ const Services = () => {
         
         <div className="mt-16 text-center">
           <p className="text-xl italic text-gray-300">
-            "Kalau kamu pengen desain yang cakep tapi gak ada isi — ya maaf, bukan di sini tempatnya."
+            "If you want pretty designs with no substance — sorry, you're in the wrong place."
           </p>
         </div>
 
@@ -185,10 +185,10 @@ const Services = () => {
           <div className="mt-16 flex justify-center">
             <div className="bg-waras-asphalt/60 backdrop-blur-sm border border-white/10 p-6 rounded-lg max-w-2xl">
               <p className="text-center text-lg font-bebas text-waras-orange mb-2">
-                MENYEDIAKAN ANEKA JASA KREATIF
+                PROVIDING VARIOUS CREATIVE SERVICES
               </p>
               <p className="text-center text-sm text-gray-300">
-                Dan aneka jasa lain yang belum terdaftar di menu... Hubungi kami untuk kebutuhan khusus.
+                And other services not listed in the menu... Contact us for special needs.
               </p>
             </div>
           </div>

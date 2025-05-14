@@ -7,7 +7,6 @@ import Services from '../components/Services';
 import Portfolio from '../components/Portfolio';
 import Testimonials from '../components/Testimonials';
 import Contact from '../components/Contact';
-import LanguageSelector from '../components/LanguageSelector';
 
 const Index = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -34,14 +33,13 @@ const Index = () => {
             WARAS
           </h1>
         </div>
-        <p className="text-waras-lime animate-pulse">sek yoo...</p>
+        <p className="text-waras-lime animate-pulse">loading...</p>
       </div>
     );
   }
 
   return (
     <div className="min-h-screen bg-waras-asphalt relative overflow-x-hidden noise">
-      <LanguageSelector />
       <NavBar />
       <Hero />
       <AboutUs />
@@ -61,7 +59,7 @@ const Index = () => {
               />
               <div>
                 <h3 className="text-2xl font-bebas text-waras-lime">WARAS</h3>
-                <p className="text-sm text-gray-400">Branding Agency (Yang Masih Waras)</p>
+                <p className="text-sm text-gray-400">Branding Agency (Still Sane)</p>
               </div>
             </div>
             
