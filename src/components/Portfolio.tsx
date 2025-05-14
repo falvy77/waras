@@ -16,6 +16,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { ChevronRight, ImageIcon, PackageOpen, StarHalf } from 'lucide-react';
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 // Enhanced portfolio data with additional details for the modal
 const portfolioItems = [
@@ -28,10 +29,11 @@ const portfolioItems = [
     imageText: "Mockup stiker kemasan",
     detailedDescription: "Klien kami menghadapi masalah identitas brand yang membingungkan. Banyak konsumen mengira nama 'Rumah Ungu' hanya sebutan biasa, bukan merek sebenarnya. Kami melakukan branding ulang dengan menciptakan logo rumah berwarna ungu yang ikonik dan menarik.",
     services: ["Desain Logo", "Branding", "Packaging Design"],
+    coverImage: "/lovable-uploads/59712dcd-d35e-4779-936a-11848453fa0e.png",
     images: [
-      { id: 1, alt: "Logo Rumah Ungu", caption: "Logo baru dengan warna ungu yang khas" },
-      { id: 2, alt: "Packaging Stiker", caption: "Stiker kemasan dengan tema rumah ungu" },
-      { id: 3, alt: "Brand Guide", caption: "Panduan penggunaan brand untuk konsistensi" }
+      { id: 1, alt: "Logo Rumah Ungu", caption: "Logo baru dengan warna ungu yang khas", src: "/lovable-uploads/1266f3e9-b2cb-48fb-bdce-ed0299ad9c8e.png" },
+      { id: 2, alt: "Packaging Stiker", caption: "Stiker kemasan dengan tema rumah ungu", src: "/lovable-uploads/59712dcd-d35e-4779-936a-11848453fa0e.png" },
+      { id: 3, alt: "Brand Guide", caption: "Panduan penggunaan brand untuk konsistensi", src: "/lovable-uploads/29291d26-9d80-41d5-9316-311c100e6dc4.png" }
     ]
   },
   {
@@ -111,23 +113,41 @@ const Portfolio = () => {
                 {/* Mockup Image Area */}
                 <div className={`h-56 relative overflow-hidden flex items-center justify-center ${item.isCTA ? 'bg-gradient-to-br from-waras-lime/20 to-transparent' : ''}`}>
                   <div className={`absolute inset-0 ${item.colorClass} opacity-20`}></div>
-                  <div className="relative z-10 text-center px-8">
-                    {item.isCTA ? (
-                      <>
-                        <StarHalf className="mx-auto mb-2 opacity-70" size={40} />
-                        <p className="font-bold italic text-xl text-waras-lime">
+                  {/* Display actual image for first portfolio item */}
+                  {item.id === 1 && item.coverImage ? (
+                    <div className="relative z-10 w-full h-full flex items-center justify-center">
+                      <AspectRatio ratio={16/9} className="w-full h-full">
+                        <img 
+                          src={item.coverImage} 
+                          alt="Stiker kemasan" 
+                          className="w-full h-full object-cover"
+                        />
+                      </AspectRatio>
+                      <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+                        <p className="font-bold italic text-xl text-white">
                           [ {item.imageText} ]
                         </p>
-                      </>
-                    ) : (
-                      <>
-                        <ImageIcon className="mx-auto mb-2 opacity-50" size={32} />
-                        <p className="font-bold italic">
-                          [ {item.imageText} ]
-                        </p>
-                      </>
-                    )}
-                  </div>
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="relative z-10 text-center px-8">
+                      {item.isCTA ? (
+                        <>
+                          <StarHalf className="mx-auto mb-2 opacity-70" size={40} />
+                          <p className="font-bold italic text-xl text-waras-lime">
+                            [ {item.imageText} ]
+                          </p>
+                        </>
+                      ) : (
+                        <>
+                          <ImageIcon className="mx-auto mb-2 opacity-50" size={32} />
+                          <p className="font-bold italic">
+                            [ {item.imageText} ]
+                          </p>
+                        </>
+                      )}
+                    </div>
+                  )}
                 </div>
                 
                 {/* Content */}
@@ -231,13 +251,32 @@ const Portfolio = () => {
                       <CarouselItem key={image.id}>
                         <div className="p-1">
                           <div className="bg-waras-asphalt/70 border border-white/5 rounded-lg overflow-hidden">
-                            <div className="h-56 flex items-center justify-center bg-gradient-to-br from-black/20 to-black/5">
-                              <div className="text-center p-8">
-                                <ImageIcon size={48} className="mx-auto mb-2 opacity-40" />
-                                <p className="font-bold text-xl">{image.alt}</p>
-                                <p className="text-white/60 mt-2">{image.caption}</p>
+                            {/* Show actual images for first portfolio item */}
+                            {selectedItem.id === 1 && image.src ? (
+                              <div className="h-56 overflow-hidden">
+                                <AspectRatio ratio={16/9} className="w-full h-full">
+                                  <img 
+                                    src={image.src} 
+                                    alt={image.alt} 
+                                    className="w-full h-full object-cover" 
+                                  />
+                                </AspectRatio>
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end justify-center">
+                                  <div className="p-4 text-center">
+                                    <p className="font-bold text-xl">{image.alt}</p>
+                                    <p className="text-white/80 mt-1">{image.caption}</p>
+                                  </div>
+                                </div>
                               </div>
-                            </div>
+                            ) : (
+                              <div className="h-56 flex items-center justify-center bg-gradient-to-br from-black/20 to-black/5">
+                                <div className="text-center p-8">
+                                  <ImageIcon size={48} className="mx-auto mb-2 opacity-40" />
+                                  <p className="font-bold text-xl">{image.alt}</p>
+                                  <p className="text-white/60 mt-2">{image.caption}</p>
+                                </div>
+                              </div>
+                            )}
                           </div>
                         </div>
                       </CarouselItem>
