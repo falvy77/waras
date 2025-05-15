@@ -30,13 +30,13 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({
         {/* Mockup Image Area */}
         <div className={`h-56 relative overflow-hidden flex items-center justify-center ${item.isCTA ? 'bg-gradient-to-br from-waras-lime/20 to-transparent' : ''}`}>
           <div className={`absolute inset-0 ${item.colorClass} opacity-20`}></div>
-          {/* Display actual image for first portfolio item */}
-          {item.id === 1 && item.coverImage ? (
+          {/* Display actual image for portfolio items with coverImage */}
+          {item.coverImage ? (
             <div className="relative z-10 w-full h-full flex items-center justify-center">
               <AspectRatio ratio={16/9} className="w-full h-full">
                 <img 
                   src={item.coverImage} 
-                  alt="Stiker kemasan" 
+                  alt={item.imageText} 
                   className="w-full h-full object-cover"
                 />
               </AspectRatio>

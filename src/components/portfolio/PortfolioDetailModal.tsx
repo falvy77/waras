@@ -88,8 +88,8 @@ const PortfolioDetailModal: React.FC<PortfolioDetailModalProps> = ({
                   <CarouselItem key={image.id}>
                     <div className="p-1">
                       <div className="bg-waras-asphalt/70 border border-white/5 rounded-lg overflow-hidden">
-                        {/* Show actual images for first portfolio item */}
-                        {selectedItem.id === 1 && image.src ? (
+                        {/* Show actual images if src is available */}
+                        {image.src ? (
                           <div className="h-56 overflow-hidden">
                             <AspectRatio ratio={16/9} className="w-full h-full">
                               <img 

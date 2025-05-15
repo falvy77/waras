@@ -28,10 +28,11 @@ export const portfolioItems: PortfolioItem[] = [
     imageText: "Mockup packaging dan advertisement",
     detailedDescription: "Pemilik Zaara Brownies kesulitan memasarkan produknya di dunia digital karena keterbatasan pengetahuan teknologi. Kami membuat solusi komprehensif dengan identitas visual yang kuat dan strategi media sosial yang mudah dijalankan.",
     services: ["Identitas Visual", "Social Media Campaign", "Packaging Design", "Marketing Strategy"],
+    coverImage: "/lovable-uploads/8965d072-07f7-4f94-89e4-90b4bb04913b.png", // Gambar baru sebagai cover
     images: [
-      { id: 1, alt: "Zaara Logo", caption: "Logo baru dengan tema brownies premium" },
-      { id: 2, alt: "Kemasan Brownies", caption: "Desain kemasan menarik yang memperlihatkan produk" },
-      { id: 3, alt: "Media Sosial", caption: "Contoh konten media sosial yang siap pakai" }
+      { id: 1, alt: "Logo Rumah Ungu", caption: "Logo baru dengan tema premium", src: "/lovable-uploads/1eb06743-6a3c-4957-aa8c-9dbeec592f57.png" },
+      { id: 2, alt: "Packaging Design", caption: "Desain kemasan menarik yang memperlihatkan produk", src: "/lovable-uploads/ea4f8e15-08c3-4ae6-b087-62fba610f086.png" },
+      { id: 3, alt: "Brand Identity", caption: "Banner dan identitas visual untuk toko", src: "/lovable-uploads/13d8d60a-7231-4311-8805-6ce20bf4cc52.png" }
     ]
   },
   {
