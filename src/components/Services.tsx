@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
+import { ExternalLink } from 'lucide-react';
 
 const servicesList = [
   {
@@ -89,6 +90,11 @@ const Services = () => {
   });
 
   const { ref: ref2, inView: inView2 } = useInView({
+    threshold: 0.1,
+    triggerOnce: true
+  });
+
+  const { ref: ref3, inView: inView3 } = useInView({
     threshold: 0.1,
     triggerOnce: true
   });
@@ -187,9 +193,27 @@ const Services = () => {
               <p className="text-center text-lg font-bebas text-waras-orange mb-2">
                 PROVIDING VARIOUS CREATIVE SERVICES
               </p>
-              <p className="text-center text-sm text-gray-300">
+              <p className="text-center text-sm text-gray-300 mb-6">
                 And other services not listed in the menu... Contact us for special needs.
               </p>
+              
+              {/* New Pricelist Button */}
+              <div 
+                ref={ref3} 
+                className={`flex justify-center transition-all duration-500 ${
+                  inView3 ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
+                }`}
+              >
+                <a 
+                  href="https://drive.google.com/file/d/1sGI6xsx6C465HtR_fc5brb90Zs6IoE3Z/view?usp=drive_link" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="waras-button waras-button-primary group flex items-center gap-2"
+                >
+                  <span>View Our Pricelist</span>
+                  <ExternalLink className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </a>
+              </div>
             </div>
           </div>
         </div>
